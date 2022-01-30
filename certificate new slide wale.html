@@ -1,0 +1,557 @@
+<!-----<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+</style>
+<body>
+
+<h2 style="text-align:center">Slideshow Gallery</h2>
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src= "D:\Documents\NEO,INTERSHIP\cerificate pic\1CgOw7.jpg"style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="D:\Documents\NEO,INTERSHIP\cerificate pic\E93747012B01_SP_15_Apr_2021.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="D:\Documents\NEO,INTERSHIP\cerificate pic\I93747012B01_SP_10_Apr_2021_05_08_57_PM.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="D:\Documents\NEO,INTERSHIP\cerificate pic\Mukesh  Kumar Ghosh222.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="D:\Documents\NEO,INTERSHIP\cerificate pic\MUKESH KUMAR GHOSH CA Certificate.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="D:\Documents\NEO,INTERSHIP\cerificate pic\MUKESH KUMAR GHOSH njnj.jpg" style="width:100%">
+  </div>
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src= "D:\Documents\NEO,INTERSHIP\cerificate pic\MUKESH KUMAR GHOSH.jpg"style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="D:\Documents\NEO,INTERSHIP\cerificate pic\S93747012B01_SP_20_Apr_2021_03_42_01_PM.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="D:\Documents\NEO,INTERSHIP\cerificate pic\student-participation-certificate.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="D:\Documents\NEO,INTERSHIP\cerificate pic\student-round1-certificate.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="D:\Documents\NEO,INTERSHIP\cerificate pic\Z1ccFNn.jpg" style="width:100%">
+  </div>
+
+
+
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="D:\Documents\NEO,INTERSHIP\cerificate pic\1CgOw7.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src= "D:\Documents\NEO,INTERSHIP\cerificate pic\certificate.jpg"style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="D:\Documents\NEO,INTERSHIP\cerificate pic\E93747012B01_SP_15_Apr_2021.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="D:\Documents\NEO,INTERSHIP\cerificate pic\Mukesh  Kumar Ghosh222.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src= "D:\Documents\NEO,INTERSHIP\cerificate pic\MUKESH KUMAR GHOSH CA Certificate.jpg"style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src= "D:\Documents\NEO,INTERSHIP\cerificate pic\MUKESH KUMAR GHOSH njnj.jpg"style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="D:\Documents\NEO,INTERSHIP\cerificate pic\MUKESH KUMAR GHOSH.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="D:\Documents\NEO,INTERSHIP\cerificate pic\S93747012B01_SP_20_Apr_2021_03_42_01_PM.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="D:\Documents\NEO,INTERSHIP\cerificate pic\student-participation-certificate.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="D:\Documents\NEO,INTERSHIP\cerificate pic\student-round1-certificate.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+    </div>
+
+    <div class="column">
+      <img class="demo cursor" src= "D:\Documents\NEO,INTERSHIP\cerificate pic\Z1ccFNn.jpg"style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+    </div>
+  </div>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+</body>
+</html>---------------->
+
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+</style>
+<body>
+
+<h2 style="text-align:center">Achivements</h2>
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src= "D:\Documents\NEO,INTERSHIP\cerificate pic\New folder\New folder\certificate (1).jpg"style="width:100%">
+  </div>
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="D:\Documents\NEO,INTERSHIP\cerificate pic\New folder\New folder\Certificate for Mukesh Kumar Ghosh for _SelectorsHub Certification ..._.png" style="width:100%">
+  </div>
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="D:\Documents\NEO,INTERSHIP\cerificate pic\New folder\New folder\certificate.jpg" style="width:100%">
+  </div>
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="D:\Documents\NEO,INTERSHIP\cerificate pic\New folder\New folder\E93747012B01_SP_15_Apr_2021.jpg" style="width:100%">
+  </div>
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="D:\Documents\NEO,INTERSHIP\cerificate pic\New folder\New folder\IMG_20220128_154624.jpg" style="width:100%">
+  </div>
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="D:\Documents\NEO,INTERSHIP\cerificate pic\New folder\New folder\IMG_20220128_154644.jpg" style="width:100%">
+  </div>
+  <div class="mySlides">
+    <div class="numbertext">7 / 6</div>
+    <img src="D:\Documents\NEO,INTERSHIP\cerificate pic\New folder\New folder\IMG_20220128_155030.jpg" style="width:100%">
+  </div>
+  <div class="mySlides">
+    <div class="numbertext">8 / 6</div>
+    <img src="D:\Documents\NEO,INTERSHIP\cerificate pic\New folder\New folder\IMG_20220128_155401.jpg" style="width:100%">
+  </div>
+  <div class="mySlides">
+    <div class="numbertext">9 / 6</div>
+    <img src="D:\Documents\NEO,INTERSHIP\cerificate pic\New folder\New folder\IMG_20220128_155551 (1).jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">10 / 6</div>
+    <img src="D:\Documents\NEO,INTERSHIP\cerificate pic\New folder\New folder\IMG_20220128_155607.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">11/ 6</div>
+    <img src="D:\Documents\NEO,INTERSHIP\cerificate pic\New folder\New folder\IMG_20220128_155625.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">12/ 6</div>
+    <img src="D:\Documents\NEO,INTERSHIP\cerificate pic\New folder\New folder\IMG_20220128_155648.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">13/ 6</div>
+    <img src="D:\Documents\NEO,INTERSHIP\cerificate pic\New folder\New folder\IMG_20220128_155837.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">14/ 6</div>
+    <img src="D:\Documents\NEO,INTERSHIP\cerificate pic\New folder\New folder\IMG_20220128_160043.jpg" style="width:100%">
+  </div>
+  <div class="mySlides">
+    <div class="numbertext">15 / 6</div>
+    <img src="D:\Documents\NEO,INTERSHIP\cerificate pic\New folder\New folder\IMG_20220128_160353.jpg" style="width:100%">
+  </div>
+  <div class="mySlides">
+    <div class="numbertext">16 / 6</div>
+    <img src= "D:\Documents\NEO,INTERSHIP\cerificate pic\New folder\New folder\IMG_20220128_160420.jpg"style="width:100%">
+  </div>
+  <div class="mySlides">
+    <div class="numbertext">17/ 6</div>
+    <img src="D:\Documents\NEO,INTERSHIP\cerificate pic\New folder\New folder\MUKESH KUMAR GHOSH CA Certificate.jpg" style="width:100%">
+  </div>
+  <div class="mySlides">
+    <div class="numbertext">18/ 6</div>
+    <img src="D:\Documents\NEO,INTERSHIP\cerificate pic\New folder\New folder\MUKESH KUMAR GHOSH njnj.jpg" style="width:100%">
+  </div>
+  <div class="mySlides">
+    <div class="numbertext">19 / 6</div>
+    <img src="D:\Documents\NEO,INTERSHIP\cerificate pic\New folder\New folder\MUKESH KUMAR GHOSH.jpg" style="width:100%">
+  </div>
+  <div class="mySlides">
+    <div class="numbertext">20/ 6</div>
+    <img src="D:\Documents\NEO,INTERSHIP\cerificate pic\New folder\New folder\S93747012B01_SP_20_Apr_2021_03_42_01_PM.jpg" style="width:100%">
+  </div>
+  <div class="mySlides">
+    <div class="numbertext">21 / 6</div>
+    <img src="D:\Documents\NEO,INTERSHIP\cerificate pic\New folder\New folder\student-participation-certificate.jpg" style="width:100%">
+  </div>
+  <div class="mySlides">
+    <div class="numbertext">22 / 6</div>
+    <img src="D:\Documents\NEO,INTERSHIP\cerificate pic\New folder\New folder\student-round1-certificate.jpg" style="width:100%">
+  </div>
+  <div class="mySlides">
+    <div class="numbertext">23/ 6</div>
+    <img src="D:\Documents\NEO,INTERSHIP\cerificate pic\New folder\New folder\z z.jpg" style="width:100%">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="D:\Documents\NEO,INTERSHIP\cerificate pic\New folder\New folder\certificate (1).jpg" style="width:100%" onclick="currentSlide(1)" alt="Tech learn">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="D:\Documents\NEO,INTERSHIP\cerificate pic\New folder\New folder\Certificate for Mukesh Kumar Ghosh for _SelectorsHub Certification ..._.png" style="width:100%" onclick="currentSlide(2)" alt="Testcase Studio">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="D:\Documents\NEO,INTERSHIP\cerificate pic\New folder\New folder\certificate.jpg" style="width:100%" onclick="currentSlide(3)" alt="Narcotics Control Bereau">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="D:\Documents\NEO,INTERSHIP\cerificate pic\New folder\New folder\E93747012B01_SP_15_Apr_2021.jpg" style="width:100%" onclick="currentSlide(4)" alt="International English Olympaid">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="D:\Documents\NEO,INTERSHIP\cerificate pic\New folder\New folder\IMG_20220128_154624.jpg" style="width:100%" onclick="currentSlide(5)" alt="NCSC,2016">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="D:\Documents\NEO,INTERSHIP\cerificate pic\New folder\New folder\IMG_20220128_154644.jpg" style="width:100%" onclick="currentSlide(6)" alt="NCSC,2019">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="D:\Documents\NEO,INTERSHIP\cerificate pic\New folder\New folder\IMG_20220128_155030.jpg" style="width:100%" onclick="currentSlide(1)" alt="Debate Competition">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="D:\Documents\NEO,INTERSHIP\cerificate pic\New folder\New folder\IMG_20220128_155401.jpg" style="width:100%" onclick="currentSlide(1)" alt="Best Monitor">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="D:\Documents\NEO,INTERSHIP\cerificate pic\New folder\New folder\IMG_20220128_155551 (1).jpg" style="width:100%" onclick="currentSlide(1)" alt="NAtional Science Olyampaid">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="D:\Documents\NEO,INTERSHIP\cerificate pic\New folder\New folder\IMG_20220128_155607.jpg" style="width:100%" onclick="currentSlide(1)" alt="Tabla">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="D:\Documents\NEO,INTERSHIP\cerificate pic\New folder\New folder\IMG_20220128_155625.jpg" style="width:100%" onclick="currentSlide(1)" alt="Tabla">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="D:\Documents\NEO,INTERSHIP\cerificate pic\New folder\New folder\IMG_20220128_155648.jpg" style="width:100%" onclick="currentSlide(1)" alt="Heritage Quiz Competition">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="D:\Documents\NEO,INTERSHIP\cerificate pic\New folder\New folder\IMG_20220128_155837.jpg" style="width:100%" onclick="currentSlide(1)" alt="InternationalEnglish Olyamaid">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="D:\Documents\NEO,INTERSHIP\cerificate pic\New folder\New folder\IMG_20220128_160043.jpg" style="width:100%" onclick="currentSlide(1)" alt="Tabla">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="D:\Documents\NEO,INTERSHIP\cerificate pic\New folder\New folder\IMG_20220128_160353.jpg" style="width:100%" onclick="currentSlide(1)" alt="Gold and Silver Medal">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="D:\Documents\NEO,INTERSHIP\cerificate pic\New folder\New folder\IMG_20220128_160420.jpg" style="width:100%" onclick="currentSlide(1)" alt="Second In Co-corricular Activities">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="D:\Documents\NEO,INTERSHIP\cerificate pic\New folder\New folder\MUKESH KUMAR GHOSH CA Certificate.jpg" style="width:100%" onclick="currentSlide(1)" alt="Intership Certificate From NEO">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="D:\Documents\NEO,INTERSHIP\cerificate pic\New folder\New folder\MUKESH KUMAR GHOSH njnj.jpg" style="width:100%" onclick="currentSlide(1)" alt="Intership Certificate from Skill Vertex ">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="D:\Documents\NEO,INTERSHIP\cerificate pic\New folder\New folder\MUKESH KUMAR GHOSH.jpg" style="width:100%" onclick="currentSlide(1)" alt="Intership Certificate From Coincent and UDGAM IIT Gauhati">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src= "D:\Documents\NEO,INTERSHIP\cerificate pic\New folder\New folder\S93747012B01_SP_20_Apr_2021_03_42_01_PM.jpg"style="width:100%" onclick="currentSlide(1)" alt="Interbational Science Olyamaid">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="D:\Documents\NEO,INTERSHIP\cerificate pic\New folder\New folder\student-participation-certificate.jpg" style="width:100%" onclick="currentSlide(1)" alt=" NEO Participation Certificate">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="D:\Documents\NEO,INTERSHIP\cerificate pic\New folder\New folder\student-round1-certificate.jpg" style="width:100%" onclick="currentSlide(1)" alt="NEO 1st round Qualification 1st round Certificate">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="D:\Documents\NEO,INTERSHIP\cerificate pic\New folder\New folder\z z.jpg" style="width:100%" onclick="currentSlide(1)" alt="Techlearn">
+    </div>
+
+  </div>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+</body>
+</html>
